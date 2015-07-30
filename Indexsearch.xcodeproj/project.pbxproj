@@ -8,11 +8,23 @@
 
 /* Begin PBXBuildFile section */
 		931586F11B4DBC9100698538 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 931586F01B4DBC9100698538 /* AppDelegate.swift */; };
-		931586F31B4DBC9100698538 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 931586F21B4DBC9100698538 /* ViewController.swift */; };
-		931586F61B4DBC9100698538 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 931586F41B4DBC9100698538 /* Main.storyboard */; };
 		931586F81B4DBC9100698538 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 931586F71B4DBC9100698538 /* Images.xcassets */; };
 		931586FB1B4DBC9100698538 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 931586F91B4DBC9100698538 /* LaunchScreen.xib */; };
 		931587071B4DBC9100698538 /* IndexsearchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 931587061B4DBC9100698538 /* IndexsearchTests.swift */; };
+		9320851E1B60381E0034B570 /* ListTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9320851D1B60381E0034B570 /* ListTableViewController.swift */; };
+		932313EC1B62EE56008388B0 /* RefreshListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 932313EB1B62EE56008388B0 /* RefreshListViewController.swift */; };
+		932398FE1B66A19C003CB996 /* SearchTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 932398FD1B66A19C003CB996 /* SearchTableViewController.swift */; };
+		9366E9D41B6AC54B004E8E4E /* Realm.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9366E9D21B6AC54B004E8E4E /* Realm.framework */; };
+		9366E9D51B6AC54B004E8E4E /* RealmSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9366E9D31B6AC54B004E8E4E /* RealmSwift.framework */; };
+		9366E9D71B6AC57E004E8E4E /* YahooSearchKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9366E9D61B6AC57E004E8E4E /* YahooSearchKit.framework */; };
+		9366E9D81B6AC5E3004E8E4E /* Realm.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 9366E9D21B6AC54B004E8E4E /* Realm.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		9366E9D91B6AC5E3004E8E4E /* RealmSwift.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 9366E9D31B6AC54B004E8E4E /* RealmSwift.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		9375F54F1B5DACED0015F45A /* SearchTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9375F54E1B5DACED0015F45A /* SearchTableViewCell.swift */; };
+		938B5C5D1B60027900343682 /* SearchTerms.swift in Sources */ = {isa = PBXBuildFile; fileRef = 938B5C5C1B60027900343682 /* SearchTerms.swift */; };
+		93E9CD791B4EDF87009DA3A7 /* YahooSearchKitResources.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 93E9CD781B4EDF87009DA3A7 /* YahooSearchKitResources.bundle */; };
+		93E9CD7E1B4EE7E1009DA3A7 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 93E9CD7D1B4EE7E1009DA3A7 /* CoreLocation.framework */; };
+		93E9CD801B4EE7F1009DA3A7 /* CoreTelephony.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 93E9CD7F1B4EE7F1009DA3A7 /* CoreTelephony.framework */; };
+		93EC7B891B642495005F2EC6 /* New Story.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 93EC7B881B642495005F2EC6 /* New Story.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -25,17 +37,43 @@
 		};
 /* End PBXContainerItemProxy section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		9392F7851B6048B30025EC59 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				9366E9D81B6AC5E3004E8E4E /* Realm.framework in Embed Frameworks */,
+				9366E9D91B6AC5E3004E8E4E /* RealmSwift.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
 		931586EB1B4DBC9100698538 /* Indexsearch.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Indexsearch.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		931586EF1B4DBC9100698538 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		931586F01B4DBC9100698538 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		931586F21B4DBC9100698538 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		931586F51B4DBC9100698538 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		931586F71B4DBC9100698538 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		931586FA1B4DBC9100698538 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
 		931587001B4DBC9100698538 /* IndexsearchTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = IndexsearchTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		931587051B4DBC9100698538 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		931587061B4DBC9100698538 /* IndexsearchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IndexsearchTests.swift; sourceTree = "<group>"; };
+		9320851D1B60381E0034B570 /* ListTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListTableViewController.swift; sourceTree = "<group>"; };
+		932313EB1B62EE56008388B0 /* RefreshListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RefreshListViewController.swift; sourceTree = "<group>"; };
+		932398FD1B66A19C003CB996 /* SearchTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchTableViewController.swift; sourceTree = "<group>"; };
+		9366E9D21B6AC54B004E8E4E /* Realm.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Realm.framework; path = "../../Downloads/realm-swift-0.93-2.2/ios/Realm.framework"; sourceTree = "<group>"; };
+		9366E9D31B6AC54B004E8E4E /* RealmSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RealmSwift.framework; path = "../../Downloads/realm-swift-0.93-2.2/ios/RealmSwift.framework"; sourceTree = "<group>"; };
+		9366E9D61B6AC57E004E8E4E /* YahooSearchKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = YahooSearchKit.framework; path = "../../Downloads/searchsdk-ios-0.4.0/Framework/YahooSearchKit.framework"; sourceTree = "<group>"; };
+		9375F54E1B5DACED0015F45A /* SearchTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchTableViewCell.swift; sourceTree = "<group>"; };
+		938B5C5C1B60027900343682 /* SearchTerms.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchTerms.swift; sourceTree = "<group>"; };
+		93E9CD781B4EDF87009DA3A7 /* YahooSearchKitResources.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = YahooSearchKitResources.bundle; sourceTree = "<group>"; };
+		93E9CD7C1B4EE511009DA3A7 /* IndexSearch-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "IndexSearch-Bridging-Header.h"; sourceTree = "<group>"; };
+		93E9CD7D1B4EE7E1009DA3A7 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
+		93E9CD7F1B4EE7F1009DA3A7 /* CoreTelephony.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreTelephony.framework; path = System/Library/Frameworks/CoreTelephony.framework; sourceTree = SDKROOT; };
+		93EC7B881B642495005F2EC6 /* New Story.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = "New Story.storyboard"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -43,6 +81,11 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9366E9D51B6AC54B004E8E4E /* RealmSwift.framework in Frameworks */,
+				9366E9D71B6AC57E004E8E4E /* YahooSearchKit.framework in Frameworks */,
+				93E9CD801B4EE7F1009DA3A7 /* CoreTelephony.framework in Frameworks */,
+				9366E9D41B6AC54B004E8E4E /* Realm.framework in Frameworks */,
+				93E9CD7E1B4EE7E1009DA3A7 /* CoreLocation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -59,6 +102,12 @@
 		931586E21B4DBC9100698538 = {
 			isa = PBXGroup;
 			children = (
+				9366E9D61B6AC57E004E8E4E /* YahooSearchKit.framework */,
+				93E9CD7F1B4EE7F1009DA3A7 /* CoreTelephony.framework */,
+				93E9CD7D1B4EE7E1009DA3A7 /* CoreLocation.framework */,
+				9366E9D21B6AC54B004E8E4E /* Realm.framework */,
+				9366E9D31B6AC54B004E8E4E /* RealmSwift.framework */,
+				93E9CD781B4EDF87009DA3A7 /* YahooSearchKitResources.bundle */,
 				931586ED1B4DBC9100698538 /* Indexsearch */,
 				931587031B4DBC9100698538 /* IndexsearchTests */,
 				931586EC1B4DBC9100698538 /* Products */,
@@ -77,12 +126,15 @@
 		931586ED1B4DBC9100698538 /* Indexsearch */ = {
 			isa = PBXGroup;
 			children = (
+				932085161B6037E70034B570 /* ViewControllers */,
 				931586F01B4DBC9100698538 /* AppDelegate.swift */,
-				931586F21B4DBC9100698538 /* ViewController.swift */,
-				931586F41B4DBC9100698538 /* Main.storyboard */,
+				938B5C5C1B60027900343682 /* SearchTerms.swift */,
 				931586F71B4DBC9100698538 /* Images.xcassets */,
+				93EC7B881B642495005F2EC6 /* New Story.storyboard */,
+				9375F54E1B5DACED0015F45A /* SearchTableViewCell.swift */,
 				931586F91B4DBC9100698538 /* LaunchScreen.xib */,
 				931586EE1B4DBC9100698538 /* Supporting Files */,
+				93E9CD7C1B4EE511009DA3A7 /* IndexSearch-Bridging-Header.h */,
 			);
 			path = Indexsearch;
 			sourceTree = "<group>";
@@ -112,6 +164,16 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		932085161B6037E70034B570 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				9320851D1B60381E0034B570 /* ListTableViewController.swift */,
+				932313EB1B62EE56008388B0 /* RefreshListViewController.swift */,
+				932398FD1B66A19C003CB996 /* SearchTableViewController.swift */,
+			);
+			name = ViewControllers;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -122,6 +184,7 @@
 				931586E71B4DBC9100698538 /* Sources */,
 				931586E81B4DBC9100698538 /* Frameworks */,
 				931586E91B4DBC9100698538 /* Resources */,
+				9392F7851B6048B30025EC59 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -161,6 +224,7 @@
 				TargetAttributes = {
 					931586EA1B4DBC9100698538 = {
 						CreatedOnToolsVersion = 6.4;
+						DevelopmentTeam = C97HU3JM3J;
 					};
 					931586FF1B4DBC9100698538 = {
 						CreatedOnToolsVersion = 6.4;
@@ -192,7 +256,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				931586F61B4DBC9100698538 /* Main.storyboard in Resources */,
+				93EC7B891B642495005F2EC6 /* New Story.storyboard in Resources */,
+				93E9CD791B4EDF87009DA3A7 /* YahooSearchKitResources.bundle in Resources */,
 				931586FB1B4DBC9100698538 /* LaunchScreen.xib in Resources */,
 				931586F81B4DBC9100698538 /* Images.xcassets in Resources */,
 			);
@@ -212,8 +277,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				931586F31B4DBC9100698538 /* ViewController.swift in Sources */,
+				9375F54F1B5DACED0015F45A /* SearchTableViewCell.swift in Sources */,
+				932398FE1B66A19C003CB996 /* SearchTableViewController.swift in Sources */,
 				931586F11B4DBC9100698538 /* AppDelegate.swift in Sources */,
+				932313EC1B62EE56008388B0 /* RefreshListViewController.swift in Sources */,
+				938B5C5D1B60027900343682 /* SearchTerms.swift in Sources */,
+				9320851E1B60381E0034B570 /* ListTableViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -236,14 +305,6 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		931586F41B4DBC9100698538 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				931586F51B4DBC9100698538 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		931586F91B4DBC9100698538 /* LaunchScreen.xib */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -342,9 +403,23 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"/Users/Aaron/Downloads/searchsdk-ios-0.4.0/Framework",
+					"/Users/Aaron/Downloads/realm-swift-0.93-2.2/ios",
+				);
 				INFOPLIST_FILE = Indexsearch/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.4;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				OTHER_LDFLAGS = (
+					"-ObjC",
+					"-all_load",
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
+				SWIFT_OBJC_BRIDGING_HEADER = "$(PROJECT_DIR)/Indexsearch/Indexsearch-Bridging-header.h";
 			};
 			name = Debug;
 		};
@@ -352,9 +427,23 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"/Users/Aaron/Downloads/searchsdk-ios-0.4.0/Framework",
+					"/Users/Aaron/Downloads/realm-swift-0.93-2.2/ios",
+				);
 				INFOPLIST_FILE = Indexsearch/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.4;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				OTHER_LDFLAGS = (
+					"-ObjC",
+					"-all_load",
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
+				SWIFT_OBJC_BRIDGING_HEADER = "$(PROJECT_DIR)/Indexsearch/Indexsearch-Bridging-header.h";
 			};
 			name = Release;
 		};
@@ -411,6 +500,7 @@
 				9315870C1B4DBC9100698538 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		9315870D1B4DBC9100698538 /* Build configuration list for PBXNativeTarget "IndexsearchTests" */ = {
 			isa = XCConfigurationList;
@@ -419,6 +509,7 @@
 				9315870F1B4DBC9100698538 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

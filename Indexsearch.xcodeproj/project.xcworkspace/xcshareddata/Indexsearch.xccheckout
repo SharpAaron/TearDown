@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>6DC368DE-60D4-4832-9006-846B7D5FCB66</string>
+	<key>IDESourceControlProjectName</key>
+	<string>Indexsearch</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>6463F261AF3740ED6BCB2E3632D0F824F6E0F3A2</key>
+		<string>https://github.com/SharpAaron/SimpleSearch.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>Indexsearch.xcodeproj</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>6463F261AF3740ED6BCB2E3632D0F824F6E0F3A2</key>
+		<string>../..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>https://github.com/SharpAaron/SimpleSearch.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>111</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>6463F261AF3740ED6BCB2E3632D0F824F6E0F3A2</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>6463F261AF3740ED6BCB2E3632D0F824F6E0F3A2</string>
+			<key>IDESourceControlWCCName</key>
+			<string>Indexsearch</string>
+		</dict>
+	</array>
+</dict>
+</plist>
