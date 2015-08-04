@@ -178,12 +178,13 @@ extension ListTableViewController: UITableViewDelegate {
     override func tableView(tableView: UITableView, commitEditingStyle editingStyle: UITableViewCellEditingStyle, forRowAtIndexPath indexPath: NSIndexPath) {
         if (editingStyle == UITableViewCellEditingStyle.Delete) {
             //handle delete (by removing the data from your array and updating the tableview)
-            let deletedSearches = unfilteredSavedSearches[indexPath.row]
+            let deletedSearches = savedSearches[indexPath.row]
             let realm = Realm()
-//            realm.write() {
-//                realm.delete(deletedSearches)
-//            }
-//            tableView.reloadData()
+            realm.write({ () -> Void in
+                realm.delete(deletedSearches)
+            })
+            savedSearches = realm.objects(SearchTermRealm).sorted("text", ascending: true)
+            tableView.reloadData()
             println("pressed delete")
         }
     }
