@@ -9,8 +9,7 @@
 import UIKit
 import RealmSwift
 
-class SearchTerms: Object {
-    dynamic var searchTerm: String = ""
-    //dynamic var existingTerm: String = ""
-    dynamic var alphabetOrder: NSString = ""
+class SearchTermRealm: Object {
+    dynamic var text: NSString = ""
+    
 }

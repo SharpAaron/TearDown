@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		9302EDAD1B6BF9BA00895652 /* SearchTerm.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9302EDAC1B6BF9BA00895652 /* SearchTerm.swift */; };
 		931586F11B4DBC9100698538 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 931586F01B4DBC9100698538 /* AppDelegate.swift */; };
 		931586F81B4DBC9100698538 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 931586F71B4DBC9100698538 /* Images.xcassets */; };
 		931586FB1B4DBC9100698538 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 931586F91B4DBC9100698538 /* LaunchScreen.xib */; };
@@ -20,7 +21,8 @@
 		9366E9D81B6AC5E3004E8E4E /* Realm.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 9366E9D21B6AC54B004E8E4E /* Realm.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		9366E9D91B6AC5E3004E8E4E /* RealmSwift.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 9366E9D31B6AC54B004E8E4E /* RealmSwift.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		9375F54F1B5DACED0015F45A /* SearchTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9375F54E1B5DACED0015F45A /* SearchTableViewCell.swift */; };
-		938B5C5D1B60027900343682 /* SearchTerms.swift in Sources */ = {isa = PBXBuildFile; fileRef = 938B5C5C1B60027900343682 /* SearchTerms.swift */; };
+		938B5C5D1B60027900343682 /* SearchTermRealm.swift in Sources */ = {isa = PBXBuildFile; fileRef = 938B5C5C1B60027900343682 /* SearchTermRealm.swift */; };
+		93DB65761B6FEE5300208EFB /* WebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93DB65751B6FEE5300208EFB /* WebViewController.swift */; };
 		93E9CD791B4EDF87009DA3A7 /* YahooSearchKitResources.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 93E9CD781B4EDF87009DA3A7 /* YahooSearchKitResources.bundle */; };
 		93E9CD7E1B4EE7E1009DA3A7 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 93E9CD7D1B4EE7E1009DA3A7 /* CoreLocation.framework */; };
 		93E9CD801B4EE7F1009DA3A7 /* CoreTelephony.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 93E9CD7F1B4EE7F1009DA3A7 /* CoreTelephony.framework */; };
@@ -53,6 +55,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		9302EDAC1B6BF9BA00895652 /* SearchTerm.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchTerm.swift; sourceTree = "<group>"; };
 		931586EB1B4DBC9100698538 /* Indexsearch.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Indexsearch.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		931586EF1B4DBC9100698538 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		931586F01B4DBC9100698538 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -68,7 +71,8 @@
 		9366E9D31B6AC54B004E8E4E /* RealmSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RealmSwift.framework; path = "../../Downloads/realm-swift-0.93-2.2/ios/RealmSwift.framework"; sourceTree = "<group>"; };
 		9366E9D61B6AC57E004E8E4E /* YahooSearchKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = YahooSearchKit.framework; path = "../../Downloads/searchsdk-ios-0.4.0/Framework/YahooSearchKit.framework"; sourceTree = "<group>"; };
 		9375F54E1B5DACED0015F45A /* SearchTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchTableViewCell.swift; sourceTree = "<group>"; };
-		938B5C5C1B60027900343682 /* SearchTerms.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchTerms.swift; sourceTree = "<group>"; };
+		938B5C5C1B60027900343682 /* SearchTermRealm.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchTermRealm.swift; sourceTree = "<group>"; };
+		93DB65751B6FEE5300208EFB /* WebViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WebViewController.swift; sourceTree = "<group>"; };
 		93E9CD781B4EDF87009DA3A7 /* YahooSearchKitResources.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = YahooSearchKitResources.bundle; sourceTree = "<group>"; };
 		93E9CD7C1B4EE511009DA3A7 /* IndexSearch-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "IndexSearch-Bridging-Header.h"; sourceTree = "<group>"; };
 		93E9CD7D1B4EE7E1009DA3A7 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
@@ -128,9 +132,11 @@
 			children = (
 				932085161B6037E70034B570 /* ViewControllers */,
 				931586F01B4DBC9100698538 /* AppDelegate.swift */,
-				938B5C5C1B60027900343682 /* SearchTerms.swift */,
+				938B5C5C1B60027900343682 /* SearchTermRealm.swift */,
+				9302EDAC1B6BF9BA00895652 /* SearchTerm.swift */,
 				931586F71B4DBC9100698538 /* Images.xcassets */,
 				93EC7B881B642495005F2EC6 /* New Story.storyboard */,
+				93DB65751B6FEE5300208EFB /* WebViewController.swift */,
 				9375F54E1B5DACED0015F45A /* SearchTableViewCell.swift */,
 				931586F91B4DBC9100698538 /* LaunchScreen.xib */,
 				931586EE1B4DBC9100698538 /* Supporting Files */,
@@ -281,8 +287,10 @@
 				932398FE1B66A19C003CB996 /* SearchTableViewController.swift in Sources */,
 				931586F11B4DBC9100698538 /* AppDelegate.swift in Sources */,
 				932313EC1B62EE56008388B0 /* RefreshListViewController.swift in Sources */,
-				938B5C5D1B60027900343682 /* SearchTerms.swift in Sources */,
+				938B5C5D1B60027900343682 /* SearchTermRealm.swift in Sources */,
+				9302EDAD1B6BF9BA00895652 /* SearchTerm.swift in Sources */,
 				9320851E1B60381E0034B570 /* ListTableViewController.swift in Sources */,
+				93DB65761B6FEE5300208EFB /* WebViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
