@@ -11,6 +11,7 @@ import UIKit
 
 
 class ListTableViewController: UITableViewController {
+    
     var unfilteredSavedSearches: [SearchTerm] = [SearchTerm]()
     let realm = Realm()
     var searchController: UISearchController!
@@ -22,7 +23,6 @@ class ListTableViewController: UITableViewController {
     
     var yahooSearchViewController: YSLSearchViewController?
 
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         tableView.backgroundColor = UIColor(red: 39.0/255, green: 73.0/255, blue: 86.0/255, alpha: 1.0)
@@ -32,10 +32,12 @@ class ListTableViewController: UITableViewController {
     
     func setupYahooSearch() {
         let settings = YSLSearchViewControllerSettings()
+        YSLSetting.sharedSetting().developerMode = false;
         settings.enableSearchToLink = true
         settings.enableTransparency = true
         yahooSearchViewController = YSLSearchViewController(settings: settings);
         yahooSearchViewController!.delegate = self
+        yahooSearchViewController?.setSearchResultTypes([YSLSearchResultTypeWeb])
     }
     
     func setupSearchController() {
@@ -43,24 +45,33 @@ class ListTableViewController: UITableViewController {
 
         let searchTableViewController = UIStoryboard(name: "New Story", bundle: nil).instantiateViewControllerWithIdentifier("searchTableViewController") as! SearchTableViewController
         
-    
+//        let searchTableViewController = SearchTableViewController()
+        searchTableViewController.listTableViewController = self
         searchController = UISearchController(searchResultsController: searchTableViewController)
         searchController.searchResultsUpdater = self
         searchController.searchBar.delegate = self
+        
         definesPresentationContext = true
         searchController.searchBar.sizeToFit()
         searchController.searchBar.placeholder = "Enter searches here"
         searchController.searchBar.tintColor = UIColor.blueColor()
         searchController.searchBar.returnKeyType = UIReturnKeyType.Search
+        searchController.delegate = self
         searchController.dimsBackgroundDuringPresentation = false
         tableView.tableHeaderView = searchController.searchBar
-        
-        
     }
+    
+//    static var dateFormatter: NSDateFormatter = {
+//        var formatter = NSDateFormatter()
+//        formatter.dateFormat = "MM-dd"
+//        return formatter
+//        }()
+    
     func synchronizeRealm() {
         let text = searchController.searchBar.text
         let term = SearchTermRealm()
         term.text = text
+        term.dateModified = NSDate()
         
         var termExists = false
         for term in savedSearches {
@@ -77,6 +88,11 @@ class ListTableViewController: UITableViewController {
             savedSearches = realm.objects(SearchTermRealm).sorted("text", ascending: true)
             tableView.reloadData()
         }
+    }
+    
+    func searchSelectedSearchResultWithString(aSearchTerm: String) {
+        yahooSearchViewController?.queryString = aSearchTerm
+        self.presentViewController(yahooSearchViewController!, animated: true, completion: nil);
     }
 }
 
@@ -109,8 +125,6 @@ extension ListTableViewController: YSLSearchViewControllerDelegate {
         return false
     }
     
-    
-    
 }
 
 // MARK: UISearchResultsUpdating 
@@ -119,51 +133,40 @@ extension ListTableViewController: UISearchResultsUpdating {
     func updateSearchResultsForSearchController(searchController: UISearchController) {
         
         var searchString = searchController.searchBar.text
-        
-        
         searchString = searchString.stringByTrimmingCharactersInSet(NSCharacterSet.whitespaceCharacterSet())
         searchString = searchString.lowercaseString
-        var predicate = NSPredicate(format: "text.lowercaseString BEGINSWITH %@", searchString.lowercaseString)
-//        var unfilteredSavedSearches: [SearchTerm] = [SearchTerm]()
         
+        var predicate = NSPredicate(format: "text.lowercaseString BEGINSWITH %@", searchString.lowercaseString)
+        unfilteredSavedSearches = []        
         for index in 0..<savedSearches.count {
             var object = savedSearches[index] as SearchTermRealm
-            
-//            println(object)
-            
-            unfilteredSavedSearches.append(SearchTerm(text: savedSearches[index].text as String))
+            unfilteredSavedSearches.append(SearchTerm(text: savedSearches[index].text as String, dateModified: savedSearches[index].dateModified))
         }
         
         var filteredData = (unfilteredSavedSearches as NSArray).filteredArrayUsingPredicate(predicate)
         (searchController.searchResultsController as! SearchTableViewController).searchResultsArray = filteredData as! [SearchTerm]
         (searchController.searchResultsController as! SearchTableViewController).tableView.reloadData()
-        
+    }
+}
 
-        
-//        if !searchString.isEmpty {
-//            searchString = searchString.stringByTrimmingCharactersInSet(NSCharacterSet.whitespaceCharacterSet())
-//            searchString = searchString.lowercaseString
-//            var predicate = NSPredicate(format: "text.lowercaseString BEGINSWITH %@", searchString.lowercaseString)
-//            var unfilteredSavedSearches: [SearchTerm] = [SearchTerm]()
-//            for index in 0..< savedSearches.count {
-//                unfilteredSavedSearches.append(SearchTerm(text: savedSearches[index].text as String))
-//            }
-//            var filteredData = (unfilteredSavedSearches as NSArray).filteredArrayUsingPredicate(predicate)
-//            (searchController.searchResultsController as! SearchTableViewController).searchResultsArray = filteredData as! [SearchTerm]
-//            (searchController.searchResultsController as! SearchTableViewController).tableView.reloadData()
-//        }
-        
-        
+extension ListTableViewController: UISearchControllerDelegate {
+    
+    func willPresentSearchController(searchController: UISearchController) {
         
     }
+    
+    func willDismissSearchController(searchController: UISearchController) {
+        
+    }
+    
 }
 
 // MARK: UISearchBarDelegate
 extension ListTableViewController: UISearchBarDelegate {
     func searchBarSearchButtonClicked(searchBar: UISearchBar) {
+        searchController.dismissViewControllerAnimated(true, completion: nil)
         //takes text from search bar and launches predefined search
         yahooSearchViewController?.queryString = searchBar.text
-        yahooSearchViewController?.setSearchResultTypes([YSLSearchResultTypeWeb])
         self.presentViewController(yahooSearchViewController!, animated: true, completion: nil);
         synchronizeRealm()
     }

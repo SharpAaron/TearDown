@@ -10,9 +10,11 @@ import Foundation
 
 class SearchTerm: NSObject {
     var text: String
+    var dateModified: NSDate
     
-    init(text: String) {
+    init(text: String, dateModified: NSDate) {
         self.text = text
+        self.dateModified = dateModified
     }
 }
 

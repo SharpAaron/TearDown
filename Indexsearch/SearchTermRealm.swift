@@ -11,5 +11,5 @@ import RealmSwift
 
 class SearchTermRealm: Object {
     dynamic var text: NSString = ""
-    
+    dynamic var dateModified = NSDate()
 }

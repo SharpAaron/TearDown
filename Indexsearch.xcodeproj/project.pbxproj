@@ -22,6 +22,7 @@
 		9366E9D91B6AC5E3004E8E4E /* RealmSwift.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 9366E9D31B6AC54B004E8E4E /* RealmSwift.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		9375F54F1B5DACED0015F45A /* SearchTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9375F54E1B5DACED0015F45A /* SearchTableViewCell.swift */; };
 		938B5C5D1B60027900343682 /* SearchTermRealm.swift in Sources */ = {isa = PBXBuildFile; fileRef = 938B5C5C1B60027900343682 /* SearchTermRealm.swift */; };
+		93B755461B73E06F00C82908 /* Images-2.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 93B755451B73E06F00C82908 /* Images-2.xcassets */; };
 		93DB65761B6FEE5300208EFB /* WebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93DB65751B6FEE5300208EFB /* WebViewController.swift */; };
 		93E9CD791B4EDF87009DA3A7 /* YahooSearchKitResources.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 93E9CD781B4EDF87009DA3A7 /* YahooSearchKitResources.bundle */; };
 		93E9CD7E1B4EE7E1009DA3A7 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 93E9CD7D1B4EE7E1009DA3A7 /* CoreLocation.framework */; };
@@ -72,6 +73,7 @@
 		9366E9D61B6AC57E004E8E4E /* YahooSearchKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = YahooSearchKit.framework; path = "../../Downloads/searchsdk-ios-0.4.0/Framework/YahooSearchKit.framework"; sourceTree = "<group>"; };
 		9375F54E1B5DACED0015F45A /* SearchTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchTableViewCell.swift; sourceTree = "<group>"; };
 		938B5C5C1B60027900343682 /* SearchTermRealm.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchTermRealm.swift; sourceTree = "<group>"; };
+		93B755451B73E06F00C82908 /* Images-2.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Images-2.xcassets"; sourceTree = "<group>"; };
 		93DB65751B6FEE5300208EFB /* WebViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WebViewController.swift; sourceTree = "<group>"; };
 		93E9CD781B4EDF87009DA3A7 /* YahooSearchKitResources.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = YahooSearchKitResources.bundle; sourceTree = "<group>"; };
 		93E9CD7C1B4EE511009DA3A7 /* IndexSearch-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "IndexSearch-Bridging-Header.h"; sourceTree = "<group>"; };
@@ -141,6 +143,7 @@
 				931586F91B4DBC9100698538 /* LaunchScreen.xib */,
 				931586EE1B4DBC9100698538 /* Supporting Files */,
 				93E9CD7C1B4EE511009DA3A7 /* IndexSearch-Bridging-Header.h */,
+				93B755451B73E06F00C82908 /* Images-2.xcassets */,
 			);
 			path = Indexsearch;
 			sourceTree = "<group>";
@@ -265,6 +268,7 @@
 				93EC7B891B642495005F2EC6 /* New Story.storyboard in Resources */,
 				93E9CD791B4EDF87009DA3A7 /* YahooSearchKitResources.bundle in Resources */,
 				931586FB1B4DBC9100698538 /* LaunchScreen.xib in Resources */,
+				93B755461B73E06F00C82908 /* Images-2.xcassets in Resources */,
 				931586F81B4DBC9100698538 /* Images.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -411,6 +415,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				FRAMEWORK_SEARCH_PATHS = (
@@ -419,7 +424,7 @@
 					"/Users/Aaron/Downloads/realm-swift-0.93-2.2/ios",
 				);
 				INFOPLIST_FILE = Indexsearch/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				OTHER_LDFLAGS = (
 					"-ObjC",
@@ -435,6 +440,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				FRAMEWORK_SEARCH_PATHS = (
@@ -443,7 +449,7 @@
 					"/Users/Aaron/Downloads/realm-swift-0.93-2.2/ios",
 				);
 				INFOPLIST_FILE = Indexsearch/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				OTHER_LDFLAGS = (
 					"-ObjC",
